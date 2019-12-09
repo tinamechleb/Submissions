@@ -13,3 +13,6 @@ a {
 .message:first-child {
   opacity: 0.5;
 }
+.message {
+  letter-spacing: 3px;
+}
