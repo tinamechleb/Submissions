@@ -1,6 +1,6 @@
-# Tina Mechleb
+# Tina Mechleb ![Supposed to be My picture](https://i.pinimg.com/236x/39/1e/e1/391ee12077ba9cabd10e476d8b8c022b.jpg)
 
-## tinamechleb@gmail.com | +961 79 192 756
+## tinamechleb@gmail.com | +961 79 192 756 |
 
 ### Education
 
@@ -15,6 +15,7 @@
 - Python
 - Java
 - C++
+- JavaScript
 
 ### Human Languages
 
