@@ -1,0 +1,95 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #212b2d;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  display: inline-block;
+  width: 100%;
+  max-width: 1160px;
+  text-align: center;
+  padding: 0 25px;
+  padding-top: 20px;
+}
+
+.background {
+  background: url("https://timelinecovers.pro/facebook-cover/download/earth-from-space-facebook-cover.jpg")
+    no-repeat center center/cover;
+  height: 250px;
+  width: 100%;
+}
+
+.topmenu {
+  background-color: #333d3f;
+  text-align: left;
+  margin-top: 15px;
+  padding: 20px 0;
+}
+
+.topmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+.topmenu a:hover {
+  background-color: #777;
+}
+
+.nav-link {
+  display: inline-block;
+}
+
+.left {
+  width: 20%;
+}
+
+.br-r {
+  border-right: 1px solid #fff;
+  padding: 0 34px;
+}
+
+.block-txt {
+  margin-top: 15px;
+}
+
+.right {
+  width: 60%;
+}
+
+.main {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.list {
+  text-decoration: underline;
+  line-height: 22px;
+}
+
+.mainmenu {
+  width: 200px;
+  background-color: #333;
+}
+.line2 {
+  border: 1px solid white;
+  margin-top: 15px;
+}
+
+.line {
+  width: 100%;
+
+  border: 1px solid #fff;
+}
+.mainmenu a {
+  color: white;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+.mainmenu a:hover {
+  background-color: #555;
+}
