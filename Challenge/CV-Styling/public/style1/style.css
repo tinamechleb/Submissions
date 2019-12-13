@@ -1,0 +1,11 @@
+header {
+  background-color: #888;
+}
+.contacts {
+  background-color: red;
+  text-decoration-color: white;
+}
+.contacts a {
+  background-color: black;
+  text-decoration-color: red;
+}
