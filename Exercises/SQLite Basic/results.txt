@@ -1,0 +1,25 @@
+Basic Queries 
+
+1 SELECT Name FROM students 
+Alex 
+Basma 
+Hasan 
+Jana 
+Layal 
+Robert 
+
+2 SELECT * FROM students WHERE Age >30 
+5	Robert	34	M	500
+6	Jana	33	F	500
+
+3 SELECT Name FROM students WHERE Age =30 AND Gender ="F" 
+
+
+4 SELECT Points FROM students WHERE Name="Alex" 
+200 
+
+5 INSERT INTO students (name,Age,Gender,Points) VALUES ("Tina",18,"F",100) 
+
+6 UPDATE students SET Points = Points + 100 WHERE Name = "Basma" 
+
+7 UPDATE students SET Points = Points - 20 WHERE Name = "Alex"
