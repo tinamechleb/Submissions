@@ -1,0 +1,98 @@
+img {
+  transform: rotate(345deg);
+  position: absolute;
+  top: 3em;
+  left: 73%;
+  width: 10%;
+}
+
+header {
+  border-bottom: 1px rgb(211, 208, 208) solid;
+}
+h2 {
+  display: none;
+}
+h3 {
+  font-style: italic;
+}
+#about h3 {
+  display: none;
+}
+#about p {
+  max-width: 75%;
+  color: #999;
+  font-style: italic;
+  padding-bottom: 4em;
+}
+
+body {
+  margin-top: 4%;
+  margin-left: 14%;
+  margin-right: 14%;
+  font-family: sans-serif;
+}
+.skill {
+  background-color: #008080;
+  max-width: 50%;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  color: white;
+}
+.skills-secondary span {
+  font-size: xx-small;
+}
+.skills .skills-secondary {
+  max-width: 2em;
+}
+
+.experience {
+}
+#experiences {
+}
+#experiences .experience {
+}
+#education {
+}
+#education .experience {
+}
+#hobbies {
+}
+#contact h3 {
+  display: none;
+}
+
+.experience-type {
+  color: #008080;
+  font-weight: 900;
+}
+.experience-institution {
+  display: none;
+}
+.experience-location,
+.experience-date {
+  display: inline-block;
+  color: #888;
+}
+.experience-location {
+  display: inline-block;
+}
+.experience-date {
+  display: inline-block;
+}
+.experience-date-separator {
+  color: #008080;
+}
+
+#competencies div {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+}
+.contact-skype {
+  display: none;
+}
+.contact-email {
+  display: block;
+  background-image: url("../images/email.png");
+}
+.contact-phone {
+}
