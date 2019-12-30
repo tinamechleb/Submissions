@@ -1,12 +1,16 @@
 /* Add your own CSS code below */
+
+/*FOR ALL*/
+body {
+  font-family: sans-serif; /*sans-serif is more beautiful to look at*/
+}
+
 span.heart {
   color: #c85308;
 }
 
-@media only screen and (min-width: 992px) {
-  .hero__title {
-    font-size: 3em;
-  }
+.site-header__title {
+  font-weight: normal; /*was too thin*/
 }
 
 .main-nav__list {
@@ -20,4 +24,43 @@ span.heart {
     justify-content: space-between;
     align-items: center;
   }
+
+  .views {
+    display: flex;
+    align-items: center;
+  }
+
+  .view-list__item {
+    margin-left: 1em;
+  }
+
+  .views__all {
+    margin-left: auto;
+  }
+}
+
+/*FOR INDEX*/
+@media only screen and (min-width: 992px) {
+  .hero__title {
+    font-size: 3em;
+  }
+}
+
+/*FOR ABOUT*/
+
+.cyf {
+  font-weight: lighter; /*looks better*/
+}
+
+.main-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-article > p {
+  max-width: 50em;
+  line-height: 1.8em;
+}
+.main-article > h1 {
+  /* DONT KNOW WHAT TO DO TO ALIGN IT WITH <p>*/
 }
