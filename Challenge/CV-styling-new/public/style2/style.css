@@ -38,6 +38,13 @@ body {
   padding: 0.5em;
   color: white;
 }
+
+.skills-primary span::after {
+  /*need better targeting :(*/
+  content: "★★★";
+  color: white;
+}
+
 .skills-secondary span {
   font-size: xx-small;
 }
