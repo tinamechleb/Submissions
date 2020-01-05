@@ -39,9 +39,33 @@ body {
   color: white;
 }
 
-.skills-primary span::after {
-  /*need better targeting :(*/
+.skills-primary :first-child span::after {
   content: "★★★";
+  color: white;
+}
+
+.skills-primary :nth-child(2) span::after {
+  content: "★★";
+  color: white;
+}
+
+.skills-primary :nth-child(3) span::after {
+  content: "★";
+  color: white;
+}
+
+.skills-secondary :first-child span::after {
+  content: "★★★★★";
+  color: white;
+}
+
+.skills-secondary :nth-child(2) span::after {
+  content: "★★★";
+  color: white;
+}
+
+.skills-secondary :nth-child(3) span::after {
+  content: "★★★★";
   color: white;
 }
 
@@ -52,18 +76,6 @@ body {
   max-width: 2em;
 }
 
-.experience {
-}
-#experiences {
-}
-#experiences .experience {
-}
-#education {
-}
-#education .experience {
-}
-#hobbies {
-}
 #contact h3 {
   display: none;
 }
@@ -100,6 +112,4 @@ body {
 .contact-email {
   display: block;
   background-image: url("../images/email.png");
-}
-.contact-phone {
 }
