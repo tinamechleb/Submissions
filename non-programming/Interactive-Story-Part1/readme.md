@@ -1,4 +1,4 @@
-#Detective Game
+# Detective Game
 
 this game is about a detective and his adventures while he's chasing a mafia and they kidnap his wife and kid.
 
