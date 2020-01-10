@@ -1,0 +1,94 @@
+h1 {
+  background-color: #022149b2;
+  position: fixed;
+  width: 100%;
+  padding: 0.7em;
+  text-align: center;
+  top: 0;
+}
+
+body {
+  background-image: url("images/background-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  color: white;
+}
+
+.thingy {
+  margin: 15% 18%;
+  background-color: #0d66814f;
+  padding-bottom: 4em;
+}
+
+#department-pic {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+}
+
+p {
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: justify;
+}
+
+p:nth-child(1) {
+  margin-top: 2em;
+  padding-top: 2em;
+}
+
+.optiom-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3em;
+  margin-left: 13%;
+  margin-right: 13%;
+}
+
+.optiom-buttons > label {
+  margin-top: 1em;
+  padding: 7px;
+}
+
+#prevbutt {
+  position: fixed;
+  bottom: 2em;
+  left: 4.5em;
+  padding: 0.5em;
+  min-width: 7em;
+}
+
+#nextbutt {
+  position: fixed;
+  bottom: 2em;
+  right: 4.5em;
+  padding: 0.5em;
+  min-width: 7em;
+}
+
+.npbutt {
+  padding-top: 1em;
+  padding-bottom: 3em;
+}
+
+#badge-pic {
+  position: fixed;
+  top: 5em;
+  left: 0.2em;
+  width: 20%;
+}
+
+label {
+  border-radius: 5px;
+  background-color: rgb(199, 222, 243);
+  font-weight: bold;
+  color: rgb(0, 0, 94);
+}
+
+button {
+  border-radius: 5px;
+  background-color: rgb(199, 222, 243);
+  font-weight: bold;
+  color: rgb(0, 0, 94);
+}

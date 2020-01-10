@@ -1,0 +1,127 @@
+
+0.0
+it has been 3 days since Detective John Parker’s latest bust and he cannot stop bragging about it to his partner Tony Catchum even now as he is driving to drop him off at his house after their shift, “that was another big bust you missed out on  again Tony but it’s alright old John is always on the job”, John adds with a smirk, “and one of these days that superhero cop and going on your own work gonna get you in trouble Johnny boy, these are some mean streets out here”, Tony replies, John with his can’t help but add one more line looks at Tony with a smile and says “I do this so my little boy can grow up in a better world!, and here we are at your home sweet home” as they pull up in front of Tony's house, “yeah! thanks for the lift partner, my regards to the misses and the little rascal you have a nice night”, “catch you later” john replies as he drives off headed to his home. 
+Not so much later John arrives and pulls up in his drive way parks the car in the guarage and enters his house living room, at first glance everything seems to be ok but something is off “the house is very quiet” he thinks to himself as he walks in “Maguy I’m home honey!” he shouts but he gets no reply, looking around he notices a piece of paper on the coffee table, “ah! a note it must be from Maguy let’s see what she wrote”, picks it up to read “Dear, Officer John we have your wife and baby, now their safety all depends on what choices you will do next, if you want to ever see them alive again don't do anything stupid and just do what the note says, there’s a place called the Lobster shack on 76th street in Queens, there’s a pay phone there next to it. be there at midnight tonight you will receive a call for further instructions”. They have my wife and kid I cannot believe “Maguy! Roger oh god please let them be safe. Oh! what do I do?”
+
+Option1.0(0.1) They want him to go to the Lobster Shack should he call Tony tell him about the incident. They know he is a cop and most likely this is a trap going without backup may be dangerous
+
+Option2.0(0.2) Check the house for any clues and start a one man investigation go after these guys on his own because that's what he does best
+
+
+
+
+
+1.0(0.1)
+John picks up the phone and calls Tony “I got home and they are not here, Maguy Roger they are both gone Tony somebody has them what do I do?”, “just calm down John and drive back to my house I'll be waiting outside for you, you will explain to me here don't worry everything will be fine” Tony replied, “alright i am on my way over to you, I’ll be right there!”, John hangs up the phone picks up the paper gets in his car and rushes over to Tony. He arrives and see’s Tony who is now walking over to him in his car, he opens up the door and gets in, “what happened what's going on?” Tony asks, “they kidnapped my wife and kid! My wife and kid whoever those bastards are they gonna pay!” John talking with anger and range, “of course they will, we will get them together partner don’t you worry, just tell me what the note says?” Tony asked him with concern.
+
+option1.1(0.1.1) Tony seems shook up and disturbed you should share the information with him so you guys can team up and go get the kidnappers.
+
+option1.2(0.1.2) Tony asked about the note but John never mentioned on the phone should you be suspicious and confront him about it.
+
+
+
+
+
+
+2.0(0.2)
+“I cannot believe they took my family” he thinks to himself as he further checks the house walking towards his bedroom, and the first thing that he notices is that the window is open and the rug next to his baby’s crib, “so this must be the way that they used to come in from I should take a look outside and see outside” he mumbled as he stuck his outside looking to his backyard he noticed a crumpled up piece of paper, he jumps outside to pick it up and take a look at what it is, “a map of the neighborhood houses and an X that marks my house”, and this somehow makes a lot of sense this was a planned job and whoever is behind it might’ve had some help pulling it off.
+
+Option2.0.1(0.2.1) This looks like a job done by professionals and it may not be safe for someone to keep going in most cases similar to this having a fellow partner in always the best choice.(this will take the player to option0.1.1 on the other side of the game) 
+
+Option2.0.2(0.2.2) go further on his own in the game and get help when he has more clues he can always call on back up later, it’s almost midnight he is running out of time and should get to the Lobster Shack.
+
+
+
+
+
+
+(0.1.1)
+John drives while further explaining to Tony that they are headed to the Lobster Shack and that they need to be there at midnight and that hebhas to answer the pay phone at that location, he will also receive a call giving her further instructions and details, “the Lobster Shack i know the place that's a pretty dangerous part of town over there too, good thing you called to have your back and so we can get these guys together” Tony replies.
+They soon arrive in front of the Lobster Shack right on time. John steps out of the car and heads to the phone booth as Tony sits tight watching him and observes him receiving the call and then walking towards a crate picking up a duffel bag and gets back in the car “what did they say what did they want? and what’s in the bag?” Tony asks, “there's counterfeit money in the bag Tony and they want me to head down to the station with it so that I switch it with the money in the evidence room from my last bust and after that deliver it down to the docks in 2 hours a boat will be waiting for me there, once I do that they will tell me where my family is, otherwise they are gonna kill them”, “that's a half a million dollars what are you going to do?” Tony replies, “I honestly don't know…”.
+
+option(0.1.1.1) GO1 You should not go to the station and risk it by taking the same counterfeited money with you to the docks hoping they will not know and doing so trick them to tell you where the family is. but you will not be considered a crooked cop.
+
+option(0.1.1.2) GO2 You should do what they ask and go to the station and switch up the money your family is worth more than a half of a million dollars that is a small price to pay.
+
+
+
+
+
+
+(0.1.2)
+John turns to Tony and asks him “I never mentioned any note did I? what would make you say there was a note Tony?” Tony quickly answering with a haste “Taking a shot in the dark i guess, you did say that they took them so it's kidnapping and kidnappers always leave a note right?”
+
+option(0.1.2.1) Tony is a detective and he is only trying to help you out after all taking wild guesses and making good assumptions is how you build up cases and acquire clues. (takes player to option0.1.1)
+
+option(0.1.2.2) You think him knowing about the note is no coincidence and you should be more careful with the information that you share with him.
+
+
+
+
+
+(0.1.1.1)
+John and Tony arrived to the docks but looks like no one is here, to me is passing and John’s patience is getting low until his cell phone rings. He picks up and answers “Detective John Parker this is detective Charles Parsley NYPD homocide division we received an anonymous tip to come and  check out a storage unit where a murder might have taken place, we found a woman and a baby, both strangled to death tied up to each other holding a note saying “we love you, our hero Detective Johnny Parker, I really need you over here sir to come and …” John drops his phone and falls to his knees and starts to cry.
+It seems that the kidnappers must have known that John never made the trip to the station and there so payed it with the price of his family.
+
+Game Over 0/100
+
+family not saved
+Crooks not caught
+hints not caught
+
+
+
+
+
+
+(0.1.1.2)
+John and Tony both arrive at the police station and again Tony stays and waits in the car as John goes into the station with the dufel bag and comes back out with the money. They head back fast to the docks to find a small boat waiting in the water, John rushes over and gets close to it to see a guy on deck, “where is my family”, John screams, “throw me the bag we do an exchange”, as he waves a yellow shut envelope in his hand mocking John too. John without hesitation throws him the bag and the guy gives him the envelope and drives the boat into the sea getting far from the docks while John opens up the envelope to find the directions to his failu whereabouts. 
+Back in the car speeding to reach the location he arrives but to be surprised to find police cars surrounding a storage unit, John rushes through “my family! my family!” he is stopped to go further by another fellow ranked sergeant holding him back, “hold it detective Parker we need to talk we received an anonymous tip about you exchanging counterfeit bills to pay off the money for your family tonight, I am very sorry about this sir but i have to place you under arrest!”
+
+score25/100
+
+
+
+
+
+
+(0.1.2.2)
+“Well the note said that I need to be by the Lobster Shack at midnight there is a pay phone there I will get a call once I get there and will be given further instructions” 
+They soon arrive in front of the Lobster Shack right on time. John steps out of the car and heads to the phone booth as Tony sits tight watching him and observes him receiving the call and then walking towards a crate picking up a duffel bag and gets back in the car “what did they say what did they want? and what’s in the bag?” Tony asks, “there's counterfeit money in the bag Tony and they want me to head down to the station with it so that I switch it with the money in the evidence room from my last bust and after that deliver it down to the docks in 2 hours a boat will be waiting for me there, once I do that they will tell me where my family is, otherwise they are gonna kill them”, “that's a half a million dollars what are you going to do?” Tony replies, “what to do indeed Tony…”
+
+Option(0.1.2.2.1) You should do what they ask and go to the station and switch up the money your family is worth more than a half of a million dollars that is a small price to pay. (Option0.1.1.2 GO2)
+
+Option(0.1.2.2.2) You tell Tony that you will do the scheme but you do not want him to be involved in it and that he may leave but really you will not do the switch but you are suspicious of Tony and cannot tell him fearing that he is involved in all of this. (will lead to the part where he went rogue and being followed) 
+
+
+
+
+
+
+
+(0.2.0.2)
+John arrives and parks next his car next to the Lobster Shack gets out of his car and straight walks to the pay phone not waiting for long and it rings and he answers as a person on the other side of the line tells him, “hello John, I need you to listen and not talk and you know the consequences for breaking the rules, next to you there is crate inside it you will find a duffel bag, what we require from you is to use the money inside the bag and switch it with the ones that are in evidence at the police station, you have two hours to be shipment docks where a boat will be waiting and for the money you will be handed an envelope that will direct you to your wife and kid play by the rules and they will survive, goodbye John” and the line cuts.
+He moves over to pick up the duffel bag and he opens it to find an amount of counterfeit money inside it, “these people are unethical is this what they really want me to do? Is this really my only choice?” he asks himself.
+
+Option(0.2.0.2.1) should he decide not to go to the station and risk going to the docks with the same duffel bag and try to fool the crooks and there he will get the envelope and go save his family.(will lead to option0.1.1.1 GO1)
+
+Option(0.2.0.2.2) since this whole thing seems fishy maybe they are watching him and he should at least go to the station and let them think switching the money and hope that way will work and he will be able to save his family.
+
+
+
+
+(0.2.0.2.2)
+John arrived to the station and there to his surprise he encounters Tony standing in front of the station, “what are you doing here?” he asks Tony. “Well I had to come back forgot something at the office how about you John”, Tony replies.
+
+Option2.0.2.2.1 tell Tony what is going on and ask for his help.(take the player to option1.1.2 GO2)
+
+Option2.0.2.2.2 not tell Tony what you are there for coz you just dropped him home and it is very odd that he is at the station while you are in a situation that is like this.
+
+
+
+
+(0.2.0.2.2.2) (WINNING END)
+John goes up to the station now suspicious of Tony and realizing how suspicious it is decides to test out his theory and follow his gut, he waits a bit in the evidence room and later comes out the station with the same duffel bag he came in with, and just as he suspected Tony is nowhere to be found so he gets in his car and drives off headed to the docks.
+On the road he notices he is being followed and he comes up with an idea to trap the car to the side of the road, and when his suspicions come true he realises it is Tony “only him could be following me at such a time like this” slowing down his car and getting themselves close he finds the opportunity to stop and confront him and that he does.
+Stepping out like a mad man he gets to the car and pulls out the gun and tells Tony that is he doesn’t comply he will kill him and that he is caught and demanding his phone and checking the logs, next making him call the guy that is working with him and to tell him that the money is on its way while he called his supervisors assembling an operation with the PD where it will work consecutively so that he can apprehend the suspect save his family and rid the world of a very crooked cop. 
+You win you have solved the story.
