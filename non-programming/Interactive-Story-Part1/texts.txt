@@ -99,28 +99,28 @@ Option(0.1.2.2.2) You tell Tony that you will do the scheme but you do not want 
 
 
 
-(0.2.0.2)
+(0.2.2)
 John arrives and parks next his car next to the Lobster Shack gets out of his car and straight walks to the pay phone not waiting for long and it rings and he answers as a person on the other side of the line tells him, “hello John, I need you to listen and not talk and you know the consequences for breaking the rules, next to you there is crate inside it you will find a duffel bag, what we require from you is to use the money inside the bag and switch it with the ones that are in evidence at the police station, you have two hours to be shipment docks where a boat will be waiting and for the money you will be handed an envelope that will direct you to your wife and kid play by the rules and they will survive, goodbye John” and the line cuts.
 He moves over to pick up the duffel bag and he opens it to find an amount of counterfeit money inside it, “these people are unethical is this what they really want me to do? Is this really my only choice?” he asks himself.
 
-Option(0.2.0.2.1) should he decide not to go to the station and risk going to the docks with the same duffel bag and try to fool the crooks and there he will get the envelope and go save his family.(will lead to option0.1.1.1 GO1)
+Option(0.2.2.1) should he decide not to go to the station and risk going to the docks with the same duffel bag and try to fool the crooks and there he will get the envelope and go save his family.(will lead to option0.1.1.1 GO1)
 
-Option(0.2.0.2.2) since this whole thing seems fishy maybe they are watching him and he should at least go to the station and let them think switching the money and hope that way will work and he will be able to save his family.
-
-
+Option(0.2.2.2) since this whole thing seems fishy maybe they are watching him and he should at least go to the station and let them think switching the money and hope that way will work and he will be able to save his family.
 
 
-(0.2.0.2.2)
+
+
+(0.2.2.2)
 John arrived to the station and there to his surprise he encounters Tony standing in front of the station, “what are you doing here?” he asks Tony. “Well I had to come back forgot something at the office how about you John”, Tony replies.
 
-Option2.0.2.2.1 tell Tony what is going on and ask for his help.(take the player to option1.1.2 GO2)
+Option2.2.2.1 tell Tony what is going on and ask for his help.(take the player to option1.1.2 GO2)
 
-Option2.0.2.2.2 not tell Tony what you are there for coz you just dropped him home and it is very odd that he is at the station while you are in a situation that is like this.
-
-
+Option2.2.2.2 not tell Tony what you are there for coz you just dropped him home and it is very odd that he is at the station while you are in a situation that is like this.
 
 
-(0.2.0.2.2.2) (WINNING END)
+
+
+(0.2.2.2.2) (WINNING END)
 John goes up to the station now suspicious of Tony and realizing how suspicious it is decides to test out his theory and follow his gut, he waits a bit in the evidence room and later comes out the station with the same duffel bag he came in with, and just as he suspected Tony is nowhere to be found so he gets in his car and drives off headed to the docks.
 On the road he notices he is being followed and he comes up with an idea to trap the car to the side of the road, and when his suspicions come true he realises it is Tony “only him could be following me at such a time like this” slowing down his car and getting themselves close he finds the opportunity to stop and confront him and that he does.
 Stepping out like a mad man he gets to the car and pulls out the gun and tells Tony that is he doesn’t comply he will kill him and that he is caught and demanding his phone and checking the logs, next making him call the guy that is working with him and to tell him that the money is on its way while he called his supervisors assembling an operation with the PD where it will work consecutively so that he can apprehend the suspect save his family and rid the world of a very crooked cop. 
