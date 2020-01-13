@@ -82,6 +82,11 @@ h5 {
   font-weight: normal;
 }
 
+#gridss > div > img {
+  width: 90px;
+  height: 90px;
+}
+
 @media only screen and (max-width: 950px) {
   #gridss {
     display: grid;
