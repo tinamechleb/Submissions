@@ -17,7 +17,17 @@ import WeatherToday from "./WeatherToday";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      weathtoday: [
+        { time: "03:00", src: mostlycloudy, temp: "8" },
+        { time: "06:00", src: mostlycloudy, temp: "9" },
+        { time: "09:00", src: clear, temp: "14" },
+        { time: "12:00", src: clear, temp: "17" },
+        { time: "15:00", src: clear, temp: "18" },
+        { time: "18:00", src: clear, temp: "16" },
+        { time: "21:00", src: mostlycloudy, temp: "13" }
+      ]
+    };
   }
 
   render() {
@@ -25,9 +35,6 @@ class App extends Component {
       <div className="app">
         <header className="app__header">
           <Search text="Search" />
-          <button type="submit" name="find-weather">
-            FIND WEATHER
-          </button>
         </header>
         <main className="app__main">
           <div>
@@ -39,27 +46,13 @@ class App extends Component {
             />
           </div>
           <div id="gridss">
-            <div>
-              <WeatherToday time="03:00" src={mostlycloudy} temp="8" />
-            </div>
-            <div>
-              <WeatherToday time="06:00" src={mostlycloudy} temp="9" />
-            </div>
-            <div>
-              <WeatherToday time="09:00" src={clear} temp="14" />
-            </div>
-            <div>
-              <WeatherToday time="12:00" src={clear} temp="17" />
-            </div>
-            <div>
-              <WeatherToday time="15:00" src={clear} temp="18" />
-            </div>
-            <div>
-              <WeatherToday time="18:00" src={clear} temp="16" />
-            </div>
-            <div>
-              <WeatherToday time="21:00" src={mostlycloudy} temp="13" />
-            </div>
+            {this.state.weathtoday.map(weath => (
+              <WeatherToday
+                time={weath.time}
+                src={weath.src}
+                temp={weath.temp}
+              />
+            ))}
           </div>
         </main>
       </div>

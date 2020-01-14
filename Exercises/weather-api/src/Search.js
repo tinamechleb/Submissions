@@ -8,6 +8,13 @@ export default class Search extends Component {
   }
 
   render() {
-    return <input type="text" id="input" value={this.props.text} />;
+    return (
+      <>
+        <input type="text" id="input" value={this.props.text} />
+        <button type="submit" name="find-weather">
+          FIND WEATHER
+        </button>
+      </>
+    );
   }
 }
