@@ -10,7 +10,12 @@ export default class Search extends Component {
   render() {
     return (
       <>
-        <input type="text" id="input" value={this.props.text} />
+        <input
+          type="text"
+          id="input"
+          value={this.props.text}
+          placeholder="Type in a city name"
+        />
         <button type="submit" name="find-weather">
           FIND WEATHER
         </button>

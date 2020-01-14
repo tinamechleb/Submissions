@@ -13,10 +13,14 @@ export default class CurrentWeather extends Component {
         <img src={this.props.src} alt={this.props.alt}></img>
         <p> {this.props.weather}</p>
         <h4>
-          Temperature <span>{this.props.span}</span>
+          Temperature{" "}
+          <span>
+            {this.props.mintemp}°C to {this.props.maxtemp}°C
+          </span>
         </h4>
         <h6>
-          Humidity <span> 78% </span> Pressure <span> 1008.48</span>
+          Humidity <span>{this.props.humidity}%</span> Pressure{" "}
+          <span>{this.props.pressure}</span>
         </h6>
       </div>
     );

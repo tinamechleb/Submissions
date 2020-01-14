@@ -13,19 +13,32 @@ import unknown from "./img/weather-icons/unknown.svg";
 import Search from "./Search";
 import CurrentWeather from "./CurrentWeather.js";
 import WeatherToday from "./WeatherToday";
+import FakeWeather from "./data/FakeWeather.json";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       weathtoday: [
-        { time: "03:00", src: mostlycloudy, temp: "8" },
-        { time: "06:00", src: mostlycloudy, temp: "9" },
-        { time: "09:00", src: clear, temp: "14" },
-        { time: "12:00", src: clear, temp: "17" },
-        { time: "15:00", src: clear, temp: "18" },
-        { time: "18:00", src: clear, temp: "16" },
-        { time: "21:00", src: mostlycloudy, temp: "13" }
+        {
+          time: "03:00",
+          src: mostlycloudy,
+          temp: FakeWeather.list[5].main.temp
+        },
+        {
+          time: "06:00",
+          src: mostlycloudy,
+          temp: FakeWeather.list[6].main.temp
+        },
+        { time: "09:00", src: clear, temp: FakeWeather.list[7].main.temp },
+        { time: "12:00", src: clear, temp: FakeWeather.list[8].main.temp },
+        { time: "15:00", src: clear, temp: FakeWeather.list[9].main.temp },
+        { time: "18:00", src: clear, temp: FakeWeather.list[10].main.temp },
+        {
+          time: "21:00",
+          src: mostlycloudy,
+          temp: FakeWeather.list[11].main.temp
+        }
       ]
     };
   }
@@ -34,15 +47,18 @@ class App extends Component {
     return (
       <div className="app">
         <header className="app__header">
-          <Search text="Search" />
+          <Search />
         </header>
         <main className="app__main">
           <div>
             <CurrentWeather
-              src={mostlycloudy}
-              alt="clear icon"
-              weather="overcast clouds"
-              span="10°C to 11°C"
+              src={clear}
+              alt={FakeWeather.list[0].weather[0].description}
+              weather={FakeWeather.list[0].weather[0].description}
+              mintemp={FakeWeather.list[0].main.temp_min}
+              maxtemp={FakeWeather.list[0].main.temp_max}
+              humidity={FakeWeather.list[0].main.humidity}
+              pressure={FakeWeather.list[0].main.pressure}
             />
           </div>
           <div id="gridss">
