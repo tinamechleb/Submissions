@@ -15,53 +15,14 @@ import CurrentWeather from "./CurrentWeather.js";
 import WeatherToday from "./WeatherToday";
 import FakeWeather from "./data/FakeWeather.json";
 
+const KEY = "be759a526d138ed13d258b92b788b7fc";
+const LINK = "http://api.openweathermap.org/data/2.5/forecast?q=";
+//const KEY_LINK="&cnt=8&units=metric&appid="`${KEY}`;
+
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      weathtoday: [
-        {
-          time: this.timeFun(FakeWeather.list[4].dt_txt),
-          src: storm,
-          temp: FakeWeather.list[5].main.temp
-        },
-        {
-          time: this.timeFun(FakeWeather.list[5].dt_txt),
-          src: storm,
-          temp: FakeWeather.list[5].main.temp
-        },
-        {
-          time: this.timeFun(FakeWeather.list[6].dt_txt),
-          src: fog,
-          temp: FakeWeather.list[6].main.temp
-        },
-        {
-          time: this.timeFun(FakeWeather.list[7].dt_txt),
-          src: fog,
-          temp: FakeWeather.list[7].main.temp
-        },
-        {
-          time: this.timeFun(FakeWeather.list[8].dt_txt),
-          src: rain,
-          temp: FakeWeather.list[8].main.temp
-        },
-        {
-          time: this.timeFun(FakeWeather.list[9].dt_txt),
-          src: drizzle,
-          temp: FakeWeather.list[9].main.temp
-        },
-        {
-          time: this.timeFun(FakeWeather.list[10].dt_txt),
-          src: rain,
-          temp: FakeWeather.list[10].main.temp
-        },
-        {
-          time: this.timeFun(FakeWeather.list[11].dt_txt),
-          src: mostlycloudy,
-          temp: FakeWeather.list[11].main.temp
-        }
-      ]
-    };
+    this.state = {};
   }
 
   kelvinToC = kel => {
@@ -93,13 +54,18 @@ class App extends Component {
             />
           </div>
           <div id="gridss">
-            {this.state.weathtoday.map(weath => (
-              <WeatherToday
-                time={weath.time}
-                src={weath.src}
-                temp={this.kelvinToC(weath.temp)}
-              />
-            ))}
+            {FakeWeather.list.map((weath, i) => {
+              i++;
+              if (i < 9) {
+                return (
+                  <WeatherToday
+                    time={this.timeFun(weath.dt_txt)}
+                    src={weath.src}
+                    temp={this.kelvinToC(weath.main.temp)}
+                  />
+                );
+              }
+            })}
           </div>
         </main>
       </div>
