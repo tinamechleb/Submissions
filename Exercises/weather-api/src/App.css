@@ -39,7 +39,7 @@ button {
   padding: 0.7em;
   display: flex;
   align-self: flex-start;
-  margin-left: 13em;
+  margin-left: 20em;
 }
 
 p {
@@ -68,7 +68,7 @@ h6 {
 
 #gridss {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 #gridss > div {

@@ -20,14 +20,43 @@ class App extends Component {
     super(props);
     this.state = {
       weathtoday: [
-        { time: "03:00", src: storm, temp: FakeWeather.list[5].main.temp },
-        { time: "06:00", src: fog, temp: FakeWeather.list[6].main.temp },
-        { time: "09:00", src: fog, temp: FakeWeather.list[7].main.temp },
-        { time: "12:00", src: rain, temp: FakeWeather.list[8].main.temp },
-        { time: "15:00", src: drizzle, temp: FakeWeather.list[9].main.temp },
-        { time: "18:00", src: rain, temp: FakeWeather.list[10].main.temp },
         {
-          time: "21:00",
+          time: this.timeFun(FakeWeather.list[4].dt_txt),
+          src: storm,
+          temp: FakeWeather.list[5].main.temp
+        },
+        {
+          time: this.timeFun(FakeWeather.list[5].dt_txt),
+          src: storm,
+          temp: FakeWeather.list[5].main.temp
+        },
+        {
+          time: this.timeFun(FakeWeather.list[6].dt_txt),
+          src: fog,
+          temp: FakeWeather.list[6].main.temp
+        },
+        {
+          time: this.timeFun(FakeWeather.list[7].dt_txt),
+          src: fog,
+          temp: FakeWeather.list[7].main.temp
+        },
+        {
+          time: this.timeFun(FakeWeather.list[8].dt_txt),
+          src: rain,
+          temp: FakeWeather.list[8].main.temp
+        },
+        {
+          time: this.timeFun(FakeWeather.list[9].dt_txt),
+          src: drizzle,
+          temp: FakeWeather.list[9].main.temp
+        },
+        {
+          time: this.timeFun(FakeWeather.list[10].dt_txt),
+          src: rain,
+          temp: FakeWeather.list[10].main.temp
+        },
+        {
+          time: this.timeFun(FakeWeather.list[11].dt_txt),
           src: mostlycloudy,
           temp: FakeWeather.list[11].main.temp
         }
@@ -37,6 +66,12 @@ class App extends Component {
 
   kelvinToC = kel => {
     return Math.round(parseFloat(kel - 273.15));
+  };
+
+  timeFun = timeInSec => {
+    const array = timeInSec.split(" ");
+    const newArray = array[1].split(":");
+    return `${newArray[0]}:${newArray[1]}`;
   };
 
   render() {
@@ -50,7 +85,7 @@ class App extends Component {
             <CurrentWeather
               src={drizzle}
               alt={FakeWeather.list[2].weather[0].main}
-              weather={FakeWeather.list[2].weather[0].description}
+              weather={FakeWeather.list[7].weather[0].description}
               mintemp={this.kelvinToC(FakeWeather.list[2].main.temp_min)}
               maxtemp={this.kelvinToC(FakeWeather.list[2].main.temp_max)}
               humidity={FakeWeather.list[2].main.humidity}
