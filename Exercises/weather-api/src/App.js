@@ -20,20 +20,12 @@ class App extends Component {
     super(props);
     this.state = {
       weathtoday: [
-        {
-          time: "03:00",
-          src: mostlycloudy,
-          temp: FakeWeather.list[5].main.temp
-        },
-        {
-          time: "06:00",
-          src: mostlycloudy,
-          temp: FakeWeather.list[6].main.temp
-        },
-        { time: "09:00", src: clear, temp: FakeWeather.list[7].main.temp },
-        { time: "12:00", src: clear, temp: FakeWeather.list[8].main.temp },
-        { time: "15:00", src: clear, temp: FakeWeather.list[9].main.temp },
-        { time: "18:00", src: clear, temp: FakeWeather.list[10].main.temp },
+        { time: "03:00", src: storm, temp: FakeWeather.list[5].main.temp },
+        { time: "06:00", src: fog, temp: FakeWeather.list[6].main.temp },
+        { time: "09:00", src: fog, temp: FakeWeather.list[7].main.temp },
+        { time: "12:00", src: rain, temp: FakeWeather.list[8].main.temp },
+        { time: "15:00", src: drizzle, temp: FakeWeather.list[9].main.temp },
+        { time: "18:00", src: rain, temp: FakeWeather.list[10].main.temp },
         {
           time: "21:00",
           src: mostlycloudy,
@@ -42,6 +34,10 @@ class App extends Component {
       ]
     };
   }
+
+  kelvinToC = kel => {
+    return Math.round(parseFloat(kel - 273.15));
+  };
 
   render() {
     return (
@@ -52,13 +48,13 @@ class App extends Component {
         <main className="app__main">
           <div>
             <CurrentWeather
-              src={clear}
-              alt={FakeWeather.list[0].weather[0].description}
-              weather={FakeWeather.list[0].weather[0].description}
-              mintemp={FakeWeather.list[0].main.temp_min}
-              maxtemp={FakeWeather.list[0].main.temp_max}
-              humidity={FakeWeather.list[0].main.humidity}
-              pressure={FakeWeather.list[0].main.pressure}
+              src={drizzle}
+              alt={FakeWeather.list[2].weather[0].main}
+              weather={FakeWeather.list[2].weather[0].description}
+              mintemp={this.kelvinToC(FakeWeather.list[2].main.temp_min)}
+              maxtemp={this.kelvinToC(FakeWeather.list[2].main.temp_max)}
+              humidity={FakeWeather.list[2].main.humidity}
+              pressure={FakeWeather.list[2].main.pressure}
             />
           </div>
           <div id="gridss">
@@ -66,7 +62,7 @@ class App extends Component {
               <WeatherToday
                 time={weath.time}
                 src={weath.src}
-                temp={weath.temp}
+                temp={this.kelvinToC(weath.temp)}
               />
             ))}
           </div>
