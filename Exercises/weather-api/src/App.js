@@ -17,7 +17,7 @@ import FakeWeather from "./data/FakeWeather.json";
 
 const KEY = "be759a526d138ed13d258b92b788b7fc";
 const LINK = "http://api.openweathermap.org/data/2.5/forecast?q=";
-//const KEY_LINK="&cnt=8&units=metric&appid="`${KEY}`;
+const KEY_LINK = "&cnt=8&units=metric&appid=be759a526d138ed13d258b92b788b7fc";
 
 class App extends Component {
   constructor(props) {
