@@ -16,7 +16,7 @@ export default class Search extends Component {
           value={this.props.text}
           placeholder="Type in a city name"
         />
-        <button type="submit" name="find-weather">
+        <button type="submit" name="find-weather" id="button">
           FIND WEATHER
         </button>
       </>

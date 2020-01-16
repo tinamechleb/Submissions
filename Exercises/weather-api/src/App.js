@@ -17,7 +17,7 @@ import FakeWeather from "./data/FakeWeather.json";
 
 const KEY = "be759a526d138ed13d258b92b788b7fc";
 const LINK = "http://api.openweathermap.org/data/2.5/forecast?q=";
-const KEY_LINK = "&cnt=8&units=metric&appid=be759a526d138ed13d258b92b788b7fc";
+const KEY_LINK = "&cnt=8&units=metric&appid=" + `${KEY}`;
 
 class App extends Component {
   constructor(props) {
@@ -25,8 +25,8 @@ class App extends Component {
     this.state = {};
   }
 
-  kelvinToC = kel => {
-    return Math.round(parseFloat(kel - 273.15));
+  kelvinToC = K => {
+    return Math.round(parseFloat(K - 273.15));
   };
 
   timeFun = timeInSec => {

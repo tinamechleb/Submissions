@@ -9,7 +9,7 @@ export default class CurrentWeather extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <img src={this.props.src} alt={this.props.alt}></img>
         <p> {this.props.weather}</p>
         <h4>
@@ -19,10 +19,10 @@ export default class CurrentWeather extends Component {
           </span>
         </h4>
         <h6>
-          Humidity <span>{this.props.humidity}%</span> Pressure{" "}
+          Humidity<span>{this.props.humidity}%</span>Pressure
           <span>{this.props.pressure}</span>
         </h6>
-      </div>
+      </>
     );
   }
 }
