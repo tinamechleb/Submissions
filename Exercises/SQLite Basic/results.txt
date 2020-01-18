@@ -56,3 +56,28 @@ Maria
   INNER JOIN companies ON employees.Company=companies.Name
   WHERE employees.Role="Graphic Designer"
 Snapchat
+
+
+COUNT & FILTER
+
+1 SELECT Name FROM students WHERE Points=(SELECT max(Points) FROM students)
+Robert
+Jana
+
+2 SELECT avg(Points) FROM students
+305.0
+
+3 SELECT count() FROM students WHERE Points = 500
+2
+
+4 SELECT Name FROM students WHERE Name like '%s%'
+Basma
+Hasan
+
+5 SELECT Name FROM students ORDER BY Points DESC
+Robert
+Jana
+Basma
+Alex
+Hasan
+Tina
