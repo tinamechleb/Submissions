@@ -64,7 +64,8 @@ function onDataReceived(text) {
   }
 }
 
-let listArr = ["task1", "task2", "task3"];
+let listArr = [" task1", " task2", " task3"];
+let listBool = [true, false, true];
 
 function splitArray(arr) {
   let secondPart = "";
@@ -80,6 +81,16 @@ function editArray(arr) {
     thirdPart += " " + arr[j];
   }
   return thirdPart;
+}
+
+function checkedORunchecked(boolArr, i) {
+  let checkedOrUnchecked = "";
+  if (boolArr[i] === true) {
+    checkedOrUnchecked = "[✓]";
+  } else {
+    checkedOrUnchecked = "[ ]";
+  }
+  return checkedOrUnchecked;
 }
 
 /**
@@ -113,7 +124,7 @@ function hello(name) {
  */
 function list() {
   for (i = 0; i < listArr.length; i++) {
-    console.log(i + 1 + " " + listArr[i]);
+    console.log(i + 1 + " - " + checkedORunchecked(listBool, i) + listArr[i]);
   }
 }
 
@@ -157,8 +168,10 @@ function edit(splittext, number, editedTask, lastTask) {
     } else {
       if (number == parseInt(number)) {
         listArr[number - 1] = editedTask;
+        console.log("Task " + number + " changed to" + editedTask);
       } else {
         listArr[listArr.length - 1] = lastTask;
+        console.log("Last task changed to" + lastTask);
       }
     }
   } else {
