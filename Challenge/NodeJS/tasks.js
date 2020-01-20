@@ -49,6 +49,8 @@ function onDataReceived(text) {
     }
   } else if (splittext[0] === "remove") {
     remove(splittext, splittext[1]);
+  } else if (splittext[0] === "edit") {
+    edit(splittext, splittext[1], editArray(splittext), splitArray(splittext));
   } else if (splittext[0] === "hello") {
     if (splittext.length > 1) {
       hello(splitArray(splittext));
@@ -70,6 +72,14 @@ function splitArray(arr) {
     secondPart += " " + arr[j];
   }
   return secondPart;
+}
+
+function editArray(arr) {
+  let thirdPart = "";
+  for (let j = 2; j < arr.length; j++) {
+    thirdPart += " " + arr[j];
+  }
+  return thirdPart;
 }
 
 /**
@@ -125,13 +135,34 @@ function add(task) {
 function remove(splittext, number) {
   if (splittext.length > 1) {
     if (number > listArr.length || number < 1) {
-      console.log("The number of task you entered does not exist");
+      console.log("The number of the task you entered does not exist");
     } else {
       listArr.splice(number - 1, 1);
       console.log("removed task number " + number);
     }
   } else {
     listArr.splice(listArr.length - 1, 1);
+  }
+}
+
+/**
+ * Edits tasks
+ *
+ * @returns {void}
+ */
+function edit(splittext, number, editedTask, lastTask) {
+  if (splittext.length > 1) {
+    if (number > listArr.length || number < 1) {
+      console.log("The number of the task you entered does not exist");
+    } else {
+      if (number == parseInt(number)) {
+        listArr[number - 1] = editedTask;
+      } else {
+        listArr[listArr.length - 1] = lastTask;
+      }
+    }
+  } else {
+    console.log("error");
   }
 }
 
