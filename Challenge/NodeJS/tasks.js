@@ -45,11 +45,13 @@ function onDataReceived(text) {
     if (splittext.length > 1) {
       add(splitArray(splittext));
     } else {
-      console.log("ERROR");
+      console.log("error");
     }
+  } else if (splittext[0] === "remove") {
+    remove(splittext, splittext[1]);
   } else if (splittext[0] === "hello") {
     if (splittext.length > 1) {
-      hello(splittext[1]);
+      hello(splitArray(splittext));
     } else {
       hello(1);
     }
@@ -65,7 +67,7 @@ let listArr = ["task1", "task2", "task3"];
 function splitArray(arr) {
   let secondPart = "";
   for (let j = 1; j < arr.length; j++) {
-    secondPart += arr[j] + " ";
+    secondPart += " " + arr[j];
   }
   return secondPart;
 }
@@ -90,7 +92,7 @@ function hello(name) {
   if (name === 1) {
     console.log("hello!");
   } else {
-    console.log("hello " + name + "!");
+    console.log("hello" + name + "!");
   }
 }
 
@@ -112,7 +114,21 @@ function list() {
  */
 function add(task) {
   listArr.push(task);
-  console.log("added " + task + "to your list");
+  console.log("added" + task + " to your list");
+}
+
+/**
+ * Removes tasks from the list
+ *
+ * @returns {void}
+ */
+function remove(splittext, number) {
+  if (splittext.length > 1) {
+    listArr.splice(number - 1, 1);
+    console.log("removed task number " + number);
+  } else {
+    listArr.splice(listArr.length - 1, 1);
+  }
 }
 
 /**
