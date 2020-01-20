@@ -51,6 +51,10 @@ function onDataReceived(text) {
     remove(splittext, splittext[1]);
   } else if (splittext[0] === "edit") {
     edit(splittext, splittext[1], editArray(splittext), splitArray(splittext));
+  } else if (splittext[0] === "check") {
+    check(splittext, splittext[1]);
+  } else if (splittext[0] === "uncheck") {
+    uncheck(splittext, splittext[1]);
   } else if (splittext[0] === "hello") {
     if (splittext.length > 1) {
       hello(splitArray(splittext));
@@ -65,7 +69,7 @@ function onDataReceived(text) {
 }
 
 let listArr = [" task1", " task2", " task3"];
-let listBool = [true, false, true];
+let listBool = [true, false, false];
 
 function splitArray(arr) {
   let secondPart = "";
@@ -173,6 +177,42 @@ function edit(splittext, number, editedTask, lastTask) {
         listArr[listArr.length - 1] = lastTask;
         console.log("Last task changed to" + lastTask);
       }
+    }
+  } else {
+    console.log("error");
+  }
+}
+
+/**
+ * Checks task
+ *
+ * @returns {void}
+ */
+function check(splittext, number) {
+  if (splittext.length > 1) {
+    if (number > listArr.length || number < 1) {
+      console.log("The number of the task you entered does not exist");
+    } else {
+      listBool[number - 1] = true;
+      console.log("task " + number + " is marked as checked");
+    }
+  } else {
+    console.log("error");
+  }
+}
+
+/**
+ * unchecks task
+ *
+ * @returns {void}
+ */
+function uncheck(splittext, number) {
+  if (splittext.length > 1) {
+    if (number > listArr.length || number < 1) {
+      console.log("The number of the task you entered does not exist");
+    } else {
+      listBool[number - 1] = false;
+      console.log("task " + number + " is marked as unchecked");
     }
   } else {
     console.log("error");
