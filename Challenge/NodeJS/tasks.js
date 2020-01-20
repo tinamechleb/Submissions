@@ -124,8 +124,12 @@ function add(task) {
  */
 function remove(splittext, number) {
   if (splittext.length > 1) {
-    listArr.splice(number - 1, 1);
-    console.log("removed task number " + number);
+    if (number > listArr.length || number < 1) {
+      console.log("The number of task you entered does not exist");
+    } else {
+      listArr.splice(number - 1, 1);
+      console.log("removed task number " + number);
+    }
   } else {
     listArr.splice(listArr.length - 1, 1);
   }
