@@ -39,6 +39,8 @@ function onDataReceived(text) {
 
   if (text === "quit\n" || text === "exit\n") {
     quit();
+  } else if (text === "list\n") {
+    list();
   } else if (splittext[0] === "hello") {
     if (splittext.length > 1) {
       hello(splittext[1]);
@@ -73,6 +75,18 @@ function hello(name) {
     console.log("hello!");
   } else {
     console.log("hello " + name + "!");
+  }
+}
+
+/**
+ * Lists tasks
+ *
+ * @returns {void}
+ */
+function list() {
+  let listArr = ["task1", "task2", "task3"];
+  for (i = 0; i < listArr.length; i++) {
+    console.log(i + 1 + " " + listArr[i]);
   }
 }
 
