@@ -73,6 +73,11 @@ function quit() {
   process.exit();
 }
 
+/**
+ * Lists commands
+ *
+ *@returns {void}
+ */
 function help() {
   console.log(
     "'hello' returns hello\n'help' to list commands\n'quit' or 'exit' to quit app"
