@@ -41,6 +41,8 @@ function onDataReceived(text) {
     quit();
   } else if (text === "list\n") {
     list();
+  } else if (splittext[0] === "add") {
+    add(splitArray(splittext));
   } else if (splittext[0] === "hello") {
     if (splittext.length > 1) {
       hello(splittext[1]);
@@ -52,6 +54,16 @@ function onDataReceived(text) {
   } else {
     unknownCommand(text);
   }
+}
+
+let listArr = ["task1", "task2", "task3"];
+
+function splitArray(arr) {
+  let secondPart = "";
+  for (let j = 1; j < arr.length; j++) {
+    secondPart += arr[j] + " ";
+  }
+  return secondPart;
 }
 
 /**
@@ -84,10 +96,19 @@ function hello(name) {
  * @returns {void}
  */
 function list() {
-  let listArr = ["task1", "task2", "task3"];
   for (i = 0; i < listArr.length; i++) {
     console.log(i + 1 + " " + listArr[i]);
   }
+}
+
+/**
+ * Adds tasks to the list
+ *
+ * @returns {void}
+ */
+function add(task) {
+  listArr.push(task);
+  console.log("added " + task + " to your list");
 }
 
 /**
