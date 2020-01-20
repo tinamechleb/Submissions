@@ -42,7 +42,11 @@ function onDataReceived(text) {
   } else if (text === "list\n") {
     list();
   } else if (splittext[0] === "add") {
-    add(splitArray(splittext));
+    if (splittext.length > 1) {
+      add(splitArray(splittext));
+    } else {
+      console.log("ERROR");
+    }
   } else if (splittext[0] === "hello") {
     if (splittext.length > 1) {
       hello(splittext[1]);
@@ -108,7 +112,7 @@ function list() {
  */
 function add(task) {
   listArr.push(task);
-  console.log("added " + task + " to your list");
+  console.log("added " + task + "to your list");
 }
 
 /**
