@@ -93,7 +93,7 @@ function quit() {
  */
 function help() {
   console.log(
-    "'hello' returns hello\n'help' to list commands\n'quit' or 'exit' to quit app"
+    "'hello X' returns hello X!\n'hello' returns hello!\n'help' to list commands\n'quit' or 'exit' to quit app"
   );
 }
 
