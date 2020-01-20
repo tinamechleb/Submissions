@@ -183,7 +183,7 @@ function quit() {
  */
 function help() {
   console.log(
-    "'hello X' returns hello X!\n'hello' returns hello!\n'help' to list commands\n'list' to list your tasks\n'add x' to add x as a task to your list\n'remove' to remove the last task in your list\n'remove x' to remove task #x in your list\n'quit' or 'exit' to quit app"
+    "'hello X' returns hello X!\n'hello' returns hello!\n'help' to list commands\n'list' to list your tasks\n'add x' to add x as a task to your list\n'remove' to remove the last task in your list\n'remove x' to remove task #x in your list\n'edit x' to edit task #x\n'edit' to edit the last task\n'quit' or 'exit' to quit app"
   );
 }
 
