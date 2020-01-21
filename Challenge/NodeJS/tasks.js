@@ -1,3 +1,6 @@
+// save does not work inside a function
+// cannot target data from JSON file to use here
+
 /**
  * Starts the application
  * This is the function that is run when the app starts
@@ -284,7 +287,6 @@ function quit() {
 function save() {
   try {
     let mydata = JSON.stringify(obj);
-    console.log(mydata);
     fs.writeFile("database2.json", mydata, "utf8", () => {});
   } catch (error) {
     console.log(error);
