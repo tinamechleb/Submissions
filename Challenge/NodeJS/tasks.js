@@ -171,8 +171,12 @@ function edit(splittext, number, editedTask, lastTask) {
       console.log("The number of the task you entered does not exist");
     } else {
       if (number == parseInt(number)) {
-        listArr[number - 1] = editedTask;
-        console.log("Task " + number + " changed to" + editedTask);
+        if (editedTask === "") {
+          console.log("error");
+        } else {
+          listArr[number - 1] = editedTask;
+          console.log("Task " + number + " changed to" + editedTask);
+        }
       } else {
         listArr[listArr.length - 1] = lastTask;
         console.log("Last task changed to" + lastTask);
