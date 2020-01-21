@@ -39,6 +39,7 @@ function onDataReceived(text) {
     .split(" ");
 
   if (text === "quit\n" || text === "exit\n") {
+    save();
     quit();
   } else if (text === "list\n") {
     list();
@@ -81,14 +82,6 @@ var obj = {
     }
   ]
 };
-
-//let testtest = JSON.parse(table[0].stringify());
-//console.log(testtest);
-
-/*function getData(mydata) {
-  let listArr = JSON.parse(mydata.tasks);
-  let listBool = JSON.parse(mydata.check);
-}*/
 
 function splitArray(arr) {
   let secondPart = "";
@@ -138,6 +131,17 @@ function hello(name) {
   } else {
     console.log("hello" + name + "!");
   }
+}
+
+/**
+ * Lists commands
+ *
+ *@returns {void}
+ */
+function help() {
+  console.log(
+    "'hello X' returns hello X!\n'hello' returns hello!\n'help' to list commands\n'list' to list your tasks\n'add x' to add x as a task to your list\n'remove' to remove the last task in your list\n'remove x' to remove task #x in your list\n'edit x' to edit task #x\n'edit' to edit the last task\n'check x' to check task #x\n'uncheck x' to uncheck task #x\n'quit' or 'exit' to quit app"
+  );
 }
 
 /**
@@ -270,25 +274,21 @@ fs.readFile("database.json", function(err, data) {
  */
 function quit() {
   console.log("Quitting now, goodbye!");
-  try {
-    let mydata = JSON.stringify(obj.table[0].tasks);
-    console.log(obj.table[0].tasks, obj.table[1].checked);
-    fs.writeFile("database2.json", mydata, () => {});
-  } catch (error) {
-    console.log("error");
-  }
   process.exit();
 }
 
 /**
- * Lists commands
+ * Saves data to JSON file
  *
- *@returns {void}
  */
-function help() {
-  console.log(
-    "'hello X' returns hello X!\n'hello' returns hello!\n'help' to list commands\n'list' to list your tasks\n'add x' to add x as a task to your list\n'remove' to remove the last task in your list\n'remove x' to remove task #x in your list\n'edit x' to edit task #x\n'edit' to edit the last task\n'check x' to check task #x\n'uncheck x' to uncheck task #x\n'quit' or 'exit' to quit app"
-  );
+function save() {
+  try {
+    let mydata = JSON.stringify(obj);
+    console.log(mydata);
+    fs.writeFile("database2.json", mydata, "utf8", () => {});
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 // The following line starts the application
