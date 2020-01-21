@@ -8,6 +8,7 @@
  * @param  {string} name the name of the app
  * @returns {void}
  */
+
 function startApp(name) {
   process.stdin.resume();
   process.stdin.setEncoding("utf8");
@@ -45,7 +46,7 @@ function onDataReceived(text) {
     if (splittext.length > 1) {
       add(splitArray(splittext));
     } else {
-      console.log("error");
+      console.error("error");
     }
   } else if (splittext[0] === "remove") {
     remove(splittext, splittext[1]);
@@ -68,8 +69,26 @@ function onDataReceived(text) {
   }
 }
 
-let listArr = [" task1", " task2", " task3"];
-let listBool = [true, false, false];
+let fs = require("fs");
+
+var obj = {
+  table: [
+    {
+      tasks: [" task1", " task2", " task3"]
+    },
+    {
+      checked: [true, false, false]
+    }
+  ]
+};
+
+//let testtest = JSON.parse(table[0].stringify());
+//console.log(testtest);
+
+/*function getData(mydata) {
+  let listArr = JSON.parse(mydata.tasks);
+  let listBool = JSON.parse(mydata.check);
+}*/
 
 function splitArray(arr) {
   let secondPart = "";
@@ -127,8 +146,14 @@ function hello(name) {
  * @returns {void}
  */
 function list() {
-  for (i = 0; i < listArr.length; i++) {
-    console.log(i + 1 + " - " + checkedORunchecked(listBool, i) + listArr[i]);
+  for (i = 0; i < obj.table[0].tasks.length; i++) {
+    console.log(
+      i +
+        1 +
+        " - " +
+        checkedORunchecked(obj.table[1].checked, i) +
+        obj.table[0].tasks[i]
+    );
   }
 }
 
@@ -138,7 +163,8 @@ function list() {
  * @returns {void}
  */
 function add(task) {
-  listArr.push(task);
+  obj.table[0].tasks.push(task);
+  obj.table[1].checked.push(false);
   console.log("added" + task + " to your list");
 }
 
@@ -149,14 +175,17 @@ function add(task) {
  */
 function remove(splittext, number) {
   if (splittext.length > 1) {
-    if (number > listArr.length || number < 1) {
+    if (number > obj.table[0].tasks.length || number < 1) {
       console.log("The number of the task you entered does not exist");
     } else {
-      listArr.splice(number - 1, 1);
+      obj.table[0].tasks.splice(number - 1, 1);
+      obj.table[1].checked.splice(number - 1, 1);
       console.log("removed task number " + number);
     }
   } else {
-    listArr.splice(listArr.length - 1, 1);
+    obj.table[0].tasks.splice(obj.table[0].tasks.length - 1, 1);
+    obj.table[1].checked.splice(obj.table[1].checked.length - 1, 1);
+    console.log("removed last task");
   }
 }
 
@@ -167,23 +196,23 @@ function remove(splittext, number) {
  */
 function edit(splittext, number, editedTask, lastTask) {
   if (splittext.length > 1) {
-    if (number > listArr.length || number < 1) {
+    if (number > obj.table[0].tasks.length || number < 1) {
       console.log("The number of the task you entered does not exist");
     } else {
       if (number == parseInt(number)) {
         if (editedTask === "") {
-          console.log("error");
+          console.error("error");
         } else {
-          listArr[number - 1] = editedTask;
+          obj.table[0].tasks[number - 1] = editedTask;
           console.log("Task " + number + " changed to" + editedTask);
         }
       } else {
-        listArr[listArr.length - 1] = lastTask;
+        obj.table[0].tasks[obj.table[0].tasks.length - 1] = lastTask;
         console.log("Last task changed to" + lastTask);
       }
     }
   } else {
-    console.log("error");
+    console.error("error");
   }
 }
 
@@ -194,14 +223,14 @@ function edit(splittext, number, editedTask, lastTask) {
  */
 function check(splittext, number) {
   if (splittext.length > 1) {
-    if (number > listArr.length || number < 1) {
+    if (number > obj.table[0].tasks.length || number < 1) {
       console.log("The number of the task you entered does not exist");
     } else {
-      listBool[number - 1] = true;
+      obj.table[1].checked[number - 1] = true;
       console.log("task " + number + " is marked as checked");
     }
   } else {
-    console.log("error");
+    console.error("error");
   }
 }
 
@@ -212,16 +241,27 @@ function check(splittext, number) {
  */
 function uncheck(splittext, number) {
   if (splittext.length > 1) {
-    if (number > listArr.length || number < 1) {
+    if (number > obj.table[0].tasks.length || number < 1) {
       console.log("The number of the task you entered does not exist");
     } else {
-      listBool[number - 1] = false;
+      obj.table[1].checked[number - 1] = false;
       console.log("task " + number + " is marked as unchecked");
     }
   } else {
-    console.log("error");
+    console.error("error");
   }
 }
+
+/**
+ * Reads JSON file
+ *
+ */
+fs.readFile("database.json", function(err, data) {
+  if (err) {
+    return console.error(err);
+  }
+  console.log("Asynchronous read: " + data);
+});
 
 /**
  * Exits the application
@@ -230,6 +270,13 @@ function uncheck(splittext, number) {
  */
 function quit() {
   console.log("Quitting now, goodbye!");
+  try {
+    let mydata = JSON.stringify(obj.table[0].tasks);
+    console.log(obj.table[0].tasks, obj.table[1].checked);
+    fs.writeFile("database2.json", mydata, () => {});
+  } catch (error) {
+    console.log("error");
+  }
   process.exit();
 }
 

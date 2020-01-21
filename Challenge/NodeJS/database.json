@@ -1,0 +1,10 @@
+{
+  "table": [
+    {
+      "tasks": [" task1", " task2", " task3"]
+    },
+    {
+      "checked": [true, false, false]
+    }
+  ]
+}
