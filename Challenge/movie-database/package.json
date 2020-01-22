@@ -1,0 +1,12 @@
+{
+  "name": "movie-database",
+  "version": "1.0.0",
+  "description": "movie database project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "author": "tina",
+  "license": "ISC"
+}
