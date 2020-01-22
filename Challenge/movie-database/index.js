@@ -18,4 +18,9 @@ app.get("/time", function(req, res) {
   res.send({ status: 200, message: time });
 });
 
+app.get("/hello/ok", function(req, res) {
+  let id = req.url.split("/")[2];
+  res.send({ status: 200, message: `Hello, ` + id });
+});
+
 app.listen(3000);
