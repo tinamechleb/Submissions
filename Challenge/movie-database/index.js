@@ -23,4 +23,17 @@ app.get("/hello/*", function(req, res) {
   res.send({ status: 200, message: `Hello, ` + id });
 });
 
+app.get("/search*", function(req, res) {
+  let search = req.url.split("=")[1];
+  if (search == "") {
+    res.send({
+      status: 500,
+      error: true,
+      message: "you have to provide a search"
+    });
+  } else {
+    res.send({ status: 200, message: "ok", data: search });
+  }
+});
+
 app.listen(3000);
