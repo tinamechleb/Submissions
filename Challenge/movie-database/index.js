@@ -1,8 +1,8 @@
 let express = require("express");
 let app = express();
 
-let t = new Date().toTimeString().split(":");
-let time = t[0] + ":" + t[1];
+let today = new Date();
+let time = today.getHours() + ":" + today.getSeconds();
 
 var url = require("url");
 
