@@ -108,6 +108,38 @@ app.get("/movies/edit", function(req, res) {
   res.send("edit");
 });
 
+app.get("/movies/update/:id?", function(req, res) {
+  let movieID = req.params.id;
+  let rating = req.query.rating;
+  let ratingINT = parseInt(rating);
+  let year = req.query.year;
+  let yearINT = parseInt(year);
+  let title = req.query.title;
+
+  let newTitle;
+  let newYear;
+  let newRating;
+
+  if (title != null || year != null || rating != null) {
+    if (title != null) {
+      newTitle = title;
+    }
+    if (year != null) {
+      newYear = yearINT;
+    }
+    if (rating != null) {
+      newRating = ratingINT;
+    }
+  } else {
+    newTitle = movies[movieID].title;
+    newYear = movies[movieID].year;
+    newRating = movies[movieID].rating;
+  }
+
+  movies[movieID] = { title: newTitle, year: newYear, rating: newRating };
+  res.send({ status: 200, data: movies });
+});
+
 app.get("/movies/delete", function(req, res) {
   res.send("delete");
 });
