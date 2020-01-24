@@ -112,6 +112,20 @@ app.get("/movies/delete", function(req, res) {
   res.send("delete");
 });
 
+app.get("/movies/delete/:id", function(req, res) {
+  let movieID = req.params.id;
+  if (movieID < movies.length && movieID >= 0) {
+    movies.splice(movieID, 1);
+    res.send({ status: 200, data: movies });
+  } else {
+    res.send({
+      status: 404,
+      error: true,
+      message: `the movie ${movieID} does not exist`
+    });
+  }
+});
+
 app.listen(3000);
 
 const movies = [
