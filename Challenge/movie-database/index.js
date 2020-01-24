@@ -18,13 +18,13 @@ app.get("/time", function(req, res) {
   res.send({ status: 200, message: time });
 });
 
-app.get("/hello/*", function(req, res) {
-  let id = req.url.split("/")[2];
+app.get("/hello/:id", function(req, res) {
+  let id = req.params.id;
   res.send({ status: 200, message: `Hello, ` + id });
 });
 
-app.get("/search*", function(req, res) {
-  let search = req.url.split("=")[1];
+app.get("/search", function(req, res) {
+  let search = req.query.s;
   if (search == "") {
     res.send({
       status: 500,
@@ -65,6 +65,19 @@ app.get("/movies/get/by-title", function(req, res) {
       return 0;
     })
   });
+});
+
+app.get("/movies/get/id/:id", function(req, res) {
+  let movieID = req.params.id;
+  if (movieID < movies.length && movieID >= 0) {
+    res.send({ status: 200, data: movies[movieID] });
+  } else {
+    res.send({
+      status: 404,
+      error: true,
+      message: `the movie ${movieID} does not exist`
+    });
+  }
 });
 
 app.get("/movies/edit", function(req, res) {
