@@ -36,8 +36,32 @@ app.get("/search", function(req, res) {
   }
 });
 
-app.get("/movies/add", function(req, res) {
-  res.send("add");
+app.get("/movies/add?", function(req, res) {
+  let rating = req.query.rating;
+  let ratingINT = parseInt(rating);
+  let year = req.query.year;
+  let yearINT = parseInt(year);
+  let title = req.query.title;
+
+  if (
+    title == "" ||
+    year == "" ||
+    year.split("").length != 4 ||
+    year != parseInt(year)
+  ) {
+    res.send({
+      status: 403,
+      error: true,
+      message: "you cannot create a movie without providing a title and a year"
+    });
+  } else if (rating == "" || rating == null) {
+    ratingINT = 4;
+    movies.push({ title: title, year: yearINT, rating: ratingINT });
+    res.send({ status: 200, data: movies });
+  } else {
+    movies.push({ title: title, year: yearINT, rating: ratingINT });
+    res.send({ status: 200, data: movies });
+  }
 });
 
 app.get("/movies/get", function(req, res) {
