@@ -120,22 +120,21 @@ app.get("/movies/update/:id?", function(req, res) {
   let newYear;
   let newRating;
 
-  if (title != null || year != null || rating != null) {
-    if (title != null) {
-      newTitle = title;
-    }
-    if (year != null) {
-      newYear = yearINT;
-    }
-    if (rating != null) {
-      newRating = ratingINT;
-    }
+  if (title != null) {
+    newTitle = title;
   } else {
     newTitle = movies[movieID].title;
+  }
+  if (year != null) {
+    newYear = yearINT;
+  } else {
     newYear = movies[movieID].year;
+  }
+  if (rating != null) {
+    newRating = ratingINT;
+  } else {
     newRating = movies[movieID].rating;
   }
-
   movies[movieID] = { title: newTitle, year: newYear, rating: newRating };
   res.send({ status: 200, data: movies });
 });
