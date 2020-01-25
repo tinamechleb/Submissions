@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img id="logo" />
+      <div class="nav-bar">
+        <a href="index.html">Home</a>
+        <a id="currentlyOn" href="contact.html">Contact Us</a>
+        <a href="newsandevents.html">News & Events</a>
+        <button id="donate-button" onclick="location.href='./donate.html';">
+          Donate
+        </button>
+      </div>
+    </header>
+    <main>
+      <fieldset>
+        <legend>Please enter information accurately</legend>
+        <p class="note">Fields containing <span>*</span> are required</p>
+        <div class="grids">
+          <label class="bold-lable" for="name">Your Name</label>
+          <input type="text" id="name" /> <br />
+          <label class="bold-lable" for="email">Your Email</label>
+          <input type="email" id="email" /> <br />
+          <div id="checkbox">
+            <input type="checkbox" id="email-checkbox" /> Send me emails to
+            update me about the child.
+          </div>
+          <label class="bold-lable" for="location"
+            >Location <span>*</span></label
+          >
+          <input type="text" id="location" required /> <br />
+        </div>
+        <div>
+          <label class="bold-lable" for="age"
+            >Child's Approximate Age <span>*</span></label
+          >
+          <br />
+          <input id="baby" name="age" type="radio" value="baby" />
+          <label for="baby"> 0-4</label> <br />
+          <input id="kid" name="age" type="radio" value="kid" />
+          <label for="kid"> 5-11</label> <br />
+          <input id="teen" name="age" type="radio" value="teen" required />
+          <label for="teen"> 12-17</label><br />
+        </div>
+        <div>
+          <label class="bold-lable" for="state"
+            >Child's State <span>*</span></label
+          >
+          <br />
+          <input id="orphan" name="state" type="radio" value="orphan" />
+          <label for="orphan"> Orphan</label> <br />
+          <input id="abused" name="state" type="radio" value="abused" />
+          <label for="abused"> Abused</label> <br />
+          <input
+            id="homeless"
+            name="state"
+            type="radio"
+            value="homeless"
+            required=""
+          />
+          <label for="homeless"> Homeless</label> <br />
+        </div>
+        <label class="bold-lable" for="more-info">More Information</label>
+        <br />
+        <textarea
+          type="text"
+          id="more-info"
+          placeholder="Enter more information about the child(ren) to help us find them faster"
+        ></textarea>
+        <br />
+      </fieldset>
+      <button type="submit" id="sub-button">Submit</button>
+    </main>
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <p>info@helpchildren.com</p>
+          <p>+961 123 456</p>
+          <p>Beirut, Lebanon</p>
+          <div class="logos">
+            <div class="facebook"><a href="#"></a></div>
+            <div class="instagram"><a href="#"></a></div>
+            <div class="twitter"><a href="#"></a></div>
+            <div class="linkedin"><a href="#"></a></div>
+          </div>
+        </div>
+        <div class="footer-grid-2">
+          <p><a href="#">Careers</a></p>
+          <p><a href="#">Our partners</a></p>
+        </div>
+        <div>
+          <p><a href="./index.html">Home</a></p>
+          <p><a href="./contact.html">Contact Us</a></p>
+          <p><a href="./newsandevents.html">News & Events</a></p>
+          <p><a href="./donate.html">Donate</a></p>
+        </div>
+      </div>
+      <div id="priv-policy">
+        <a href="#">privacy policy</a> - <a href="#">terms of use</a>
+      </div>
+      <div id="rights">© 2020 HelpChildren.com - All rights reserved.</div>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

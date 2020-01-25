@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Donate</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img id="logo" />
+      <div class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="newsandevents.html">News & Events</a>
+      </div>
+    </header>
+    <main>
+      <fieldset>
+        <legend>Please enter your information</legend>
+        <p class="note">Fields containing <span>*</span> are required</p>
+        <div class="grids">
+          <label class="bold-lable" for="name">Your Name</label>
+          <input type="text" id="name" /> <br />
+          <label class="bold-lable" for="email"
+            >Your Email <span>*</span></label
+          >
+          <input type="email" id="email" /> <br />
+        </div>
+        <div>
+          <label class="bold-lable" for="amount"
+            >Choose Amount<span>*</span></label
+          >
+          <br />
+          <input id="5" name="amount" type="radio" value="5" />
+          <label for="5"> $5</label> <br />
+          <input id="10" name="amount" type="radio" value="10" />
+          <label for="10"> $10</label> <br />
+          <input id="50" name="amount" type="radio" value="50" required />
+          <label for="50"> $50</label><br />
+          <input id="other" name="amount" type="radio" value="other" required />
+          <label for="other"> other:</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label class="bold-lable" for="creditcard-number"
+            >Your Credit Card Information</label
+          >
+          <br />
+          <label for="creditcard-number"
+            >Your Credit Card Number <span>*</span></label
+          >
+          <br />
+          <input type="text" id="creditcard-number" /> <br />
+        </div>
+        <label class="bold-lable" for="more-info">Your Message</label> <br />
+        <textarea
+          type="text"
+          id="more-info"
+          placeholder="Tell us why you want to donate, or type any message you want"
+        ></textarea>
+        <br />
+      </fieldset>
+      <button type="submit" id="sub-button">Donate</button>
+    </main>
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <p>info@helpchildren.com</p>
+          <p>+961 123 456</p>
+          <p>Beirut, Lebanon</p>
+          <div class="logos">
+            <div class="facebook"><a href="#"></a></div>
+            <div class="instagram"><a href="#"></a></div>
+            <div class="twitter"><a href="#"></a></div>
+            <div class="linkedin"><a href="#"></a></div>
+          </div>
+        </div>
+        <div class="footer-grid-2">
+          <p><a href="#">Careers</a></p>
+          <p><a href="#">Our partners</a></p>
+        </div>
+        <div>
+          <p><a href="./index.html">Home</a></p>
+          <p><a href="./contact.html">Contact Us</a></p>
+          <p><a href="./newsandevents.html">News & Events</a></p>
+          <p><a href="./donate.html">Donate</a></p>
+        </div>
+      </div>
+      <div id="priv-policy">
+        <a href="#">privacy policy</a> - <a href="#">terms of use</a>
+      </div>
+      <div id="rights">© 2020 HelpChildren.com - All rights reserved.</div>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

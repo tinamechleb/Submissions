@@ -108,7 +108,7 @@ app.get("/movies/edit", (req, res) => {
   res.send("edit");
 });
 
-app.get("/movies/update/:id?", (req, res) => {
+app.get("/movies/edit/:id?", (req, res) => {
   let movieID = req.params.id;
   let rating = req.query.rating;
   let ratingINT = parseInt(rating);

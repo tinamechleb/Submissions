@@ -1,0 +1,377 @@
+body {
+  font-family: sans-serif;
+  background-color: rgb(201, 201, 201);
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  background-color: #333;
+  white-space: nowrap;
+}
+
+.nav-bar a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  min-width: 20%;
+  text-decoration: none;
+}
+
+#currentlyOn {
+  background-color: #4d4d4d9f;
+}
+
+.nav-bar a:hover {
+  background-color: #525252;
+}
+
+#donate-button {
+  position: absolute;
+  top: 13px;
+  right: 30px;
+  padding: 5px;
+}
+
+fieldset {
+  margin: 2em;
+  border-radius: 7px;
+  line-height: 2em;
+  padding-left: 1em;
+  margin-bottom: 1em;
+}
+
+#sub-button {
+  padding: 0.5em;
+  font-weight: 600;
+  margin-left: 4em;
+  margin-bottom: 2em;
+}
+
+textarea {
+  width: 40%;
+  padding-bottom: 5em;
+}
+
+.grids {
+  display: grid;
+  grid-template-columns: 13em;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+
+.note {
+  color: #414141;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+span {
+  color: #c40101;
+}
+
+.bold-lable {
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+legend {
+  font-size: larger;
+}
+
+#email-checkbox {
+  width: 1em;
+}
+
+#checkbox {
+  width: 30em;
+  font-size: small;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 20s slidy infinite;
+}
+
+.image-container figure div {
+  width: 20%;
+  float: left;
+  height: 100vh;
+}
+
+@keyframes slidy {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+.img1 {
+  background: url(./images/rene-bernal-f0rdHx5P8sQ-unsplash.jpg) no-repeat
+    center center/cover;
+  width: auto;
+  height: 90.5vh;
+}
+.img2 {
+  background: url(./images/larm-rmah-AEaTUnvneik-unsplash.jpg) no-repeat center
+    center/cover;
+  width: auto;
+  height: 90.5vh;
+}
+.img3 {
+  background: url(./images/yannis-h-uaPaEM7MiQQ-unsplash.jpg) no-repeat center
+    center/cover;
+  width: auto;
+  height: 90.5vh;
+}
+.img4 {
+  background: url(./images/jonathan-borba-evSsjwWCBJ4-unsplash.jpg) no-repeat
+    center center/cover;
+  width: auto;
+  height: 90.5vh;
+}
+
+.img5 {
+  background: url(./images/mi-pham-xtd3zYWxEs4-unsplash.jpg) no-repeat center
+    center/cover;
+  width: auto;
+  height: 90.5vh;
+}
+
+.img6 {
+  background: url(./images/charlein-gracia--Ux5mdMJNEA-unsplash.jpg) no-repeat
+    center center/cover;
+  width: auto;
+  height: 90.5vh;
+}
+
+.img7 {
+  background: url(./images/ben-white-lVCHfXn3VME-unsplash.jpg) no-repeat center
+    center/cover;
+  width: auto;
+  height: 90.5vh;
+}
+
+.img8 {
+  background: url(./images/mi-pham-0DPyb8t_KfI-unsplash.jpg) no-repeat center
+    center/cover;
+  width: auto;
+  height: 90.5vh;
+}
+
+.homepageinfo {
+  margin: 2em;
+}
+
+.homepageinfo h1 {
+  margin-top: 2em;
+  color: #001044;
+}
+
+.homepageinfo p {
+  font-style: italic;
+}
+
+.events {
+  display: grid;
+  grid-template-columns: 24em 24em 24em;
+  justify-content: space-between;
+}
+
+.events p {
+  font-size: small;
+}
+
+.events h2 {
+  color: #0062d1;
+}
+
+.events h6 {
+  color: #2e2e2eb7;
+}
+
+.events h4 {
+  margin-left: 2em;
+}
+
+.event-info {
+  display: inline-flex;
+}
+
+#event-day {
+  font-weight: bold;
+}
+
+#event-date {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#event-time {
+  color: #a30000d8;
+}
+
+footer {
+  background-color: #333;
+  color: #ffffff94;
+  padding: 1.5em;
+  margin-top: 3em;
+}
+
+#rights {
+  text-align: center;
+}
+
+.facebook {
+  background: url(./images/facebook.png) no-repeat center center/cover;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}
+
+.instagram {
+  background: url(./images/instagram.png) no-repeat center center/cover;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}
+
+.twitter {
+  background: url(./images/twitter.png) no-repeat center center/cover;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}
+
+.linkedin {
+  background: url(./images/linkedin.png) no-repeat center center/cover;
+  width: 23px;
+  height: 23px;
+  margin: 5px;
+}
+
+.logos {
+  display: inline-flex;
+  align-self: center;
+}
+
+#priv-policy {
+  text-align: center;
+  margin: 10px;
+}
+
+footer a {
+  color: #ffffff94;
+  text-decoration: none;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-grid-2 {
+  line-height: 15px;
+}
+
+@media only screen and (max-width: 700px) {
+  .nav-bar {
+    flex-direction: column;
+  }
+  fieldset {
+    margin: 0.5em;
+    margin-top: 3em;
+  }
+  textarea {
+    width: 80%;
+  }
+  legend {
+    font-size: medium !important;
+  }
+  .note {
+    font-size: small;
+  }
+  #sub-button {
+    margin-top: 1em;
+    margin-left: 5.5em;
+  }
+  label {
+    font-size: small;
+  }
+  #donate-button {
+    top: 13em;
+    right: 1em;
+  }
+  .footer-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: medium;
+  }
+  h2 {
+    font-size: medium;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  .event-info p {
+    font-size: 10px;
+  }
+  p {
+    font-size: small;
+  }
+  #priv-policy {
+    font-size: small;
+  }
+  #rights {
+    font-size: small;
+  }
+  .events {
+    margin: 0em;
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 15em;
+    justify-content: space-between;
+  }
+  .events h4 {
+    margin-bottom: 2em;
+    font-size: 13px;
+  }
+}
