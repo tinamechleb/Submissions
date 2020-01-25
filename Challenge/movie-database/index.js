@@ -6,24 +6,24 @@ let time = today.getHours() + ":" + today.getSeconds();
 
 var url = require("url");
 
-app.get("/", function(req, res) {
+app.get("/", (req, res) => {
   res.send("ok");
 });
 
-app.get("/test", function(req, res) {
+app.get("/test", (req, res) => {
   res.send({ status: 200, message: "ok" });
 });
 
-app.get("/time", function(req, res) {
+app.get("/time", (req, res) => {
   res.send({ status: 200, message: time });
 });
 
-app.get("/hello/:id", function(req, res) {
+app.get("/hello/:id", (req, res) => {
   let id = req.params.id;
   res.send({ status: 200, message: `Hello, ` + id });
 });
 
-app.get("/search", function(req, res) {
+app.get("/search", (req, res) => {
   let search = req.query.s;
   if (search == "") {
     res.send({
@@ -36,7 +36,7 @@ app.get("/search", function(req, res) {
   }
 });
 
-app.get("/movies/add?", function(req, res) {
+app.get("/movies/add?", (req, res) => {
   let rating = req.query.rating;
   let ratingINT = parseInt(rating);
   let year = req.query.year;
@@ -64,22 +64,22 @@ app.get("/movies/add?", function(req, res) {
   }
 });
 
-app.get("/movies/get", function(req, res) {
+app.get("/movies/get", (req, res) => {
   res.send({ status: 200, data: movies });
 });
 
-app.get("/movies/get/by-date", function(req, res) {
+app.get("/movies/get/by-date", (req, res) => {
   res.send({ status: 200, data: movies.sort((a, b) => a.year - b.year) });
 });
 
-app.get("/movies/get/by-rating", function(req, res) {
+app.get("/movies/get/by-rating", (req, res) => {
   res.send({ status: 200, data: movies.sort((a, b) => b.rating - a.rating) });
 });
 
-app.get("/movies/get/by-title", function(req, res) {
+app.get("/movies/get/by-title", (req, res) => {
   res.send({
     status: 200,
-    data: movies.sort(function(a, b) {
+    data: movies.sort((a, b) => {
       if (a.title < b.title) {
         return -1;
       }
@@ -91,7 +91,7 @@ app.get("/movies/get/by-title", function(req, res) {
   });
 });
 
-app.get("/movies/get/id/:id", function(req, res) {
+app.get("/movies/get/id/:id", (req, res) => {
   let movieID = req.params.id;
   if (movieID < movies.length && movieID >= 0) {
     res.send({ status: 200, data: movies[movieID] });
@@ -104,11 +104,11 @@ app.get("/movies/get/id/:id", function(req, res) {
   }
 });
 
-app.get("/movies/edit", function(req, res) {
+app.get("/movies/edit", (req, res) => {
   res.send("edit");
 });
 
-app.get("/movies/update/:id?", function(req, res) {
+app.get("/movies/update/:id?", (req, res) => {
   let movieID = req.params.id;
   let rating = req.query.rating;
   let ratingINT = parseInt(rating);
@@ -139,11 +139,11 @@ app.get("/movies/update/:id?", function(req, res) {
   res.send({ status: 200, data: movies });
 });
 
-app.get("/movies/delete", function(req, res) {
+app.get("/movies/delete", (req, res) => {
   res.send("delete");
 });
 
-app.get("/movies/delete/:id", function(req, res) {
+app.get("/movies/delete/:id", (req, res) => {
   let movieID = req.params.id;
   if (movieID < movies.length && movieID >= 0) {
     movies.splice(movieID, 1);
