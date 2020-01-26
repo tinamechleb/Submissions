@@ -195,6 +195,49 @@ legend {
   height: 90.5vh;
 }
 
+.news {
+  display: grid;
+  grid-template-columns: 17em 17em 17em 17em;
+  justify-content: space-between;
+}
+
+#next {
+  text-align: center;
+}
+
+#next a {
+  font-size: 10em;
+  color: #0062d1;
+  text-decoration: none;
+}
+
+#more-news {
+  text-align: center;
+}
+#more-news a {
+  color: black;
+  text-decoration: none;
+}
+
+.image1 {
+  background: url(./images/ben-white-4K2lIP0zc_k-unsplash.jpg) no-repeat center
+    center/cover;
+  width: 20vw;
+  height: 30vh;
+}
+.image2 {
+  background: url(./images/guillaume-de-germain-fgmLRBlUIpc-unsplash.jpg)
+    no-repeat center center/cover;
+  width: 20vw;
+  height: 30vh;
+}
+.image3 {
+  background: url(./images/loren-joseph-XoBWUBA3Amg-unsplash.jpg) no-repeat
+    center center/cover;
+  width: 20vw;
+  height: 30vh;
+}
+
 .homepageinfo {
   margin: 2em;
 }
@@ -310,7 +353,27 @@ footer a {
   line-height: 15px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1200px) {
+  .events {
+    margin: 0em;
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 15em 15em 15em;
+    justify-content: space-between;
+  }
+  .news {
+    margin: 0em;
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 15em 15em 15em;
+    justify-content: space-between;
+  }
+  #third-news {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
   .nav-bar {
     flex-direction: column;
   }
@@ -367,11 +430,24 @@ footer a {
     margin: 0em;
     margin-top: 2em;
     display: grid;
-    grid-template-columns: 15em;
+    grid-template-columns: 75vw;
     justify-content: space-between;
   }
   .events h4 {
     margin-bottom: 2em;
     font-size: 13px;
+  }
+  .news {
+    grid-template-columns: 75vw;
+  }
+  #second-news {
+    display: none;
+  }
+  #third-news {
+    display: none;
+  }
+  .image1 {
+    width: 75vw;
+    height: 50vh;
   }
 }
