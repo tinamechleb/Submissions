@@ -450,4 +450,8 @@ footer a {
     width: 75vw;
     height: 50vh;
   }
+  #checkbox {
+    width: 18em;
+    font-size: small;
+  }
 }
