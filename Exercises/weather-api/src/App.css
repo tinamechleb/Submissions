@@ -34,6 +34,7 @@ header {
   top: 27px;
 }
 
+<<<<<<< HEAD
 button {
   background-color: #6455c9;
   color: #290066;
@@ -100,4 +101,10 @@ h5 {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+=======
+/* Current weather */
+
+div {
+  border: 5px solid red;
+>>>>>>> dbfca94249132279d87cdc433793d8f550b80fc5
 }

@@ -1,4 +1,9 @@
 import React, { Component } from "react";
+import Search from "./components/Search";
+
+import SayHi, { SayHello } from "./components/WeatherItem";
+import fakeWeatherData from "./fakeWeatherData.json";
+
 import "./App.css";
 import clear from "./img/weather-icons/clear.svg";
 import cloudy from "./img/weather-icons/cloudy.svg";
@@ -22,9 +27,12 @@ const KEY_LINK = "&cnt=8&units=metric&appid=" + `${KEY}`;
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      name: "Karim"
+    };
   }
 
+<<<<<<< HEAD
   kelvinToC = K => {
     return Math.round(parseFloat(K - 273.15));
   };
@@ -33,11 +41,16 @@ class App extends Component {
     const array = timeInSec.split(" ");
     const newArray = array[1].split(":");
     return `${newArray[0]}:${newArray[1]}`;
+=======
+  handleInputChange = value => {
+    this.setState({ name: value });
+>>>>>>> dbfca94249132279d87cdc433793d8f550b80fc5
   };
 
   render() {
     return (
       <div className="app">
+<<<<<<< HEAD
         <header className="app__header">
           <Search />
         </header>
@@ -68,6 +81,11 @@ class App extends Component {
             })}
           </div>
         </main>
+=======
+        <SayHi />
+        <SayHello color="black" name={this.state.name} />
+        <Search handleInput={this.handleInputChange} />
+>>>>>>> dbfca94249132279d87cdc433793d8f550b80fc5
       </div>
     );
   }
