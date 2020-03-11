@@ -1,7 +1,7 @@
 <?php
     function sqrtOf($num) {
-        $squareayre = sqrt($num);
-        echo $squareayre;
+        $squareroot = sqrt($num);
+        echo $squareroot;
     }
 
     sqrtOf(16);
